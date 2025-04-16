@@ -17,7 +17,7 @@ func TestGetAPIKey(t *testing.T) {
     headers = http.Header{
         "Authorization": []string{"Bearer sometoken"},
     }
-    _, err = GetAPIKey(headers) $
+    _, err = GetAPIKey(headers)
     if err == nil || err.Error() != "malformed authorization header" {
         t.Errorf("expected 'malformed authorization header' error, got %v", err)
     }
